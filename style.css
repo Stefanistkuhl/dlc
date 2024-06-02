@@ -1,0 +1,73 @@
+body {
+	background-image: url('images/v2.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	font-family: Mantinia Regular;
+	font-family: 'Courier New', Courier, monospace;
+}
+
+:root {
+	--color: #ffe7bb;
+	--color-2: #ffe7bb;
+	--bg-color: linear-gradient(#1f0e0e60, #0d07046c);
+}
+
+@keyframes oida {
+	50% {
+		box-shadow: 10px 10px 30px var(--color-2);
+	}
+}
+
+.counter {
+	filter: drop-shadow(5px 5px 2px #000000);
+}
+
+.counter_container {
+	position: absolute;
+	left: 45%;
+	top: 30%;
+	transform: translateX(-50%);
+	text-align: center;
+	border-radius: 10px;
+	background-image: var(--bg-color);
+	/* Removed semicolon after var(--bg-color) */
+	border: 1px solid var(--color);
+	padding: 10px;
+	box-shadow: 0 0 15px 5px var(--color-2);
+	animation: oida 10s infinite;
+}
+
+.time>td {
+	width: 25%;
+}
+
+@media (orientation: landscape) {
+	.counter {
+		font-size: 4.2vh;
+		color: var(--color);
+	}
+
+	.time {
+		text-align: center;
+		font-size: 2vh;
+		color: var(--color);
+
+	}
+}
+
+@media (orientation: portrait) {
+	.counter {
+		font-size: 4.2vw;
+		color: var(--color);
+	}
+
+	.time {
+		text-align: center;
+		font-size: 2vw;
+		color: var(--color);
+
+	}
+
+}
